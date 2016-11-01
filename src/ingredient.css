@@ -1,11 +1,13 @@
 li {
   display: flex;
   align-items: center;
-  border: 1px solid white;
-  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  border-radius: 3px;
+  padding-right: 1rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
   cursor: pointer;
+  overflow: hidden;
 }
 
 li.selected {

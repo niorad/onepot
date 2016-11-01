@@ -22,12 +22,16 @@ class App extends Component {
           {key: 'tomato'}
         ],
         base: [
-          'onions', 'spring-onions', 'ginger'
+          {key: 'red onions'}, 
+          {key: 'white onions'}, 
+          {key: 'scallots'},
+          {key: 'spring onions'}
         ],
       },
       current: {
         pasta: '/none/',
-        liquid: '/none/'
+        liquid: '/none/',
+        base: '/none/'
       }
     }
   }
@@ -52,6 +56,12 @@ class App extends Component {
             ingredients={this.state.ingredients.liquid}
             setCurrentIngredient={this.setCurrentIngredient}
             currentIngredient={this.state.current.liquid}
+          />
+          <Selector 
+            name="base" 
+            ingredients={this.state.ingredients.base}
+            setCurrentIngredient={this.setCurrentIngredient}
+            currentIngredient={this.state.current.base}
           />
         </div>
         <div className="App-status">

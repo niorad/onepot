@@ -1,5 +1,6 @@
 .App {
-  background-color: #222;
+  background-color: #eee;
   padding: 20px;
-  color: white;
+  color: black;
+  font-family: hack, menlo, meslo, sans-serif;
 }

@@ -5,9 +5,11 @@ class StatusBar extends Component {
   render() {
     return (
       <div className="status-bar">
-        Pasta: {this.props.currentIngredients.pasta}
+        Pasta: <b>{this.props.currentIngredients.pasta}</b>
         <br />
-        Liquid: {this.props.currentIngredients.liquid}
+        Liquid: <b>{this.props.currentIngredients.liquid}</b>
+        <br />
+        Base: <b>{this.props.currentIngredients.base}</b>
       </div>
     );
   }
