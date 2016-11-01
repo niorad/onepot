@@ -11,6 +11,7 @@ class Selector extends Component {
 
   onIngredientSelected(name) {
     this.props.setCurrentIngredient(this.props.name, name);
+
   }
 
   render() {
@@ -22,7 +23,8 @@ class Selector extends Component {
             this.props.ingredients.map(item => (
               <Ingredient 
                 name={item.key} 
-                key={item.key} 
+                key={item.key}
+                isActive={ this.props.currentIngredient === item.key }
                 onIngredientSelected={this.onIngredientSelected}
               />
             ))

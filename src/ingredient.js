@@ -6,7 +6,7 @@ class Ingredient extends Component {
   render() {
     return (
       <li 
-        className="Ingredient" 
+        className={"Ingredient " + (this.props.isActive ? "selected" : "no") }
         onClick={ () => this.props.onIngredientSelected(this.props.name) }
       >
         <img alt="Food" src="http://lorempixel.com/50/50/food/" />

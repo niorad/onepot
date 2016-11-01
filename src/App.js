@@ -45,11 +45,13 @@ class App extends Component {
             name="pasta" 
             ingredients={this.state.ingredients.pasta}
             setCurrentIngredient={this.setCurrentIngredient}
+            currentIngredient={this.state.current.pasta}
           />
           <Selector 
             name="liquid" 
             ingredients={this.state.ingredients.liquid}
             setCurrentIngredient={this.setCurrentIngredient}
+            currentIngredient={this.state.current.liquid}
           />
         </div>
         <div className="App-status">
