@@ -6,30 +6,22 @@ class StatusBar extends Component {
     return (
       <table className="status-bar">
         <tbody>
-          <tr>
-            <td>
-              Pasta:
-            </td>
-            <td>
-              <b>{this.props.currentIngredients.pasta}</b>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Liquid:
-            </td>
-            <td>
-              <b>{this.props.currentIngredients.liquid}</b>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Base:
-            </td>
-            <td>            
-              <b>{this.props.currentIngredients.base}</b>
-            </td>
-          </tr>
+
+          {
+            Object.keys(this.props.currentIngredients).map(key => (
+
+              <tr>
+                <td>
+                  {key}:
+                </td>
+                <td>
+                  <b>{this.props.currentIngredients[key]}</b>
+                </td>
+              </tr>
+
+            ))
+          }
+
         </tbody>
       </table>
     );

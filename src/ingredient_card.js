@@ -7,9 +7,9 @@ class IngredientCard extends Component {
     return (
       <li 
         className={"ingredient-card " + (this.props.isActive ? "active" : "no") }
+        style={ {backgroundImage: 'url(/foods/' + this.props.name + '.jpg)'} }
       >
         <span>{this.props.name}</span>
-        <img alt="Food" src="http://lorempixel.com/150/180/food/" />
       </li>
     );
   }

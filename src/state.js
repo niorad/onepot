@@ -7,7 +7,7 @@ module.exports = {
         { key: 'tagliatelle' },
         { key: 'spaghetti' },
         { key: 'farfalle' },
-        { key: 'fusili' }
+        { key: 'fusilli' }
       ]
     },
     liquid: {
@@ -23,7 +23,7 @@ module.exports = {
       products: [
         { key: 'red onions' },
         { key: 'white onions' },
-        { key: 'scallots' },
+        { key: 'shallots' },
         { key: 'spring onions' }
       ]
     },
