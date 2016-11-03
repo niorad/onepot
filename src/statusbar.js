@@ -4,13 +4,34 @@ import './statusbar.css';
 class StatusBar extends Component {
   render() {
     return (
-      <div className="status-bar">
-        Pasta: <b>{this.props.currentIngredients.pasta}</b>
-        <br />
-        Liquid: <b>{this.props.currentIngredients.liquid}</b>
-        <br />
-        Base: <b>{this.props.currentIngredients.base}</b>
-      </div>
+      <table className="status-bar">
+        <tbody>
+          <tr>
+            <td>
+              Pasta:
+            </td>
+            <td>
+              <b>{this.props.currentIngredients.pasta}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Liquid:
+            </td>
+            <td>
+              <b>{this.props.currentIngredients.liquid}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Base:
+            </td>
+            <td>            
+              <b>{this.props.currentIngredients.base}</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 }

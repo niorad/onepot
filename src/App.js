@@ -1,39 +1,16 @@
 import React, { Component } from 'react';
 import Selector from './selector';
 import StatusBar from './statusbar';
-import './App.css';
+import './app.css';
+import state from './state';
+
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.setCurrentIngredient = this.setCurrentIngredient.bind(this);
-    this.state = {
-      ingredients: {
-        pasta: [
-          {key: 'tagliatelle'}, 
-          {key: 'spaghetti'}, 
-          {key: 'farfalle'}, 
-          {key: 'fusili'}
-        ],
-        liquid: [
-          {key: 'broth'}, 
-          {key: 'soya'}, 
-          {key: 'tomato'}
-        ],
-        base: [
-          {key: 'red onions'}, 
-          {key: 'white onions'}, 
-          {key: 'scallots'},
-          {key: 'spring onions'}
-        ],
-      },
-      current: {
-        pasta: '/none/',
-        liquid: '/none/',
-        base: '/none/'
-      }
-    }
+    this.state = state;
   }
 
   setCurrentIngredient(type, newCurrent) {
@@ -44,25 +21,19 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>OPP</h2>
-          <Selector 
-            name="pasta" 
-            ingredients={this.state.ingredients.pasta}
-            setCurrentIngredient={this.setCurrentIngredient}
-            currentIngredient={this.state.current.pasta}
-          />
-          <Selector 
-            name="liquid" 
-            ingredients={this.state.ingredients.liquid}
-            setCurrentIngredient={this.setCurrentIngredient}
-            currentIngredient={this.state.current.liquid}
-          />
-          <Selector 
-            name="base" 
-            ingredients={this.state.ingredients.base}
-            setCurrentIngredient={this.setCurrentIngredient}
-            currentIngredient={this.state.current.base}
-          />
+          <h1>One Pot Pasta Wizard</h1>
+          {
+            Object.keys(this.state.ingredients).map(key => (
+              <div key={key}>
+                <Selector 
+                  name={key} 
+                  ingredients={this.state.ingredients[key].products}
+                  setCurrentIngredient={this.setCurrentIngredient}
+                  currentIngredient={this.state.current[key]}
+                />
+              </div>
+            ))
+          }
         </div>
         <div className="App-status">
           <StatusBar 
